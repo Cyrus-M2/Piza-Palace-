@@ -43,15 +43,42 @@
 import products_data from "../data/product-data"
 function Dishes ({ title, description, image, discountPercentage, rate, price }) {
     return (
-        
-    )
-}
-
-
-const Product () {
-    return (
-        <div className="product-container">
-
+        <div className="menu-card">
+            <div className="dish-img">
+                <img src={image} alt="" />
+                <span className="badge-percent">{discountPercentage}%</span>
+                <span className="rating">{rate}⭐</span>
+            </div>
+            <div className="menu-content">
+                <div className="text-area">
+                    <p className="dish-title">{title}</p>
+                    <p className="food-description">{description}</p>
+                </div>
+                <div className="price-tag">
+                    <strong>${price}</strong>
+                </div>
+            </div>
         </div>
     )
 }
+
+
+function Menu () {
+    return (
+        <section className="menu-section">
+            {products_data.map(({ title, description, image, discountPercentage, rate, price }, idx) => (
+                <Dishes 
+                key={idx}
+                title={title}
+                description={description}
+                discountPercentage={discountPercentage}
+                rate={rate}
+                image={image}
+                price={price}
+                />
+            ))}
+        </section>
+    )
+}
+
+export default Menu;

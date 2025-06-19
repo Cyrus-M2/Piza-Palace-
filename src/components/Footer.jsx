@@ -1,7 +1,7 @@
 function Footer() {
     return (
-        <footer className="">
-            <p className="">
+        <footer className="footer">
+            <p className="footer-text">
                 Created with 💖 by Cyrus Maundu
             </p>
         </footer>

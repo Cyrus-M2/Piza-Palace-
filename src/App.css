@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-wrapper .all-dishes-highlighted,
+.category-wrapper .dish {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: #777;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.category-wrapper .all-dishes-highlighted {
+  color: #ff004f;
+  font-weight: 700;
+}
+.category-wrapper .dish:hover {
+  color: #ff004f;
+}
+.vieww-all {
+  margin-left: auto;
+}
+.view-btn {
+  background-color: #ff004f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #d3003f;
+}
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.menu-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.menu-card:hover {
+  transform: translateX(-5px);
+}
+.dish-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.dish-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.badge-percent {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ffa500;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+.rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #222;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+.menu-content {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.text-area .dish-title {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.text-area .food-description {
+  font-size: 0.875rem;
+  color: #777;
+  line-height: 1.4;
+}
+.price-tag {
+  color: #d3003f;
+  font-weight: 700;
+}
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.875rem;
+}
+.footer-text {
+  padding: 1rem 0;
+}
